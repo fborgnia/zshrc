@@ -34,13 +34,3 @@ compinit
 for file in $HOME/.zsh/rc/*.rc; do
 	source $file
 done
-# screen
-if [ "$SSH_CONNECTION" ]; then
-	if [ -z "$STY" ]; then
-		# Screen is not currently running, but we are in SSH, so start a session
-		exec screen -D -R 
-	fi
-fi
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
