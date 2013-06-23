@@ -1,1 +1,1 @@
-alias pacman='sudo pacman'
+alias pacman='sudo pacman --color auto'
