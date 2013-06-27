@@ -1,0 +1,4 @@
+zshrc
+=====
+
+zsh config vainillin
