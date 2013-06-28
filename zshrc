@@ -21,6 +21,9 @@ bindkey "5C" forward-word
 # Activation
 compinit
 
+# Config file
+source config.rc
+
 # Resource files
 for file in $HOME/.zsh/rc/*.rc; do
         source $file

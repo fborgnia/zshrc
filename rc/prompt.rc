@@ -1,12 +1,10 @@
-host_color=blue
-# give me colors
 autoload -U colors
 colors
 
 if [[ $host_color == "" ]]; then
   host_colors=(black green blue cyan red yellow magenta white)
   host_color=$host_colors[$[${RANDOM}%7 +1 ]]
-  echo host_color=$host_color | cat - ~/.zsh/rc/prompt.rc > /tmp/prompt.rc && mv /tmp/prompt.rc ~/.zsh/rc/prompt.rc
+  echo host_color=$host_color | cat - ~/.zsh/config.rc > /tmp/config.rc && mv /tmp/config.rc ~/.zsh/config.rc
 fi
 
 user_color="green" 
