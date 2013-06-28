@@ -1,4 +1,0 @@
-HISTFILE=~/.histfile
-SAVEHIST=5000
-setopt appendhistory
-setopt share_history
