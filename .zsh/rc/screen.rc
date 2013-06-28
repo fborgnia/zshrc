@@ -1,0 +1,7 @@
+if [ "$SSH_CONNECTION" ]; then
+        if [ -z "$STY" ]; then
+                # Screen is not currently running, but we are in SSH, so start a session
+                exec screen -D -R
+        fi
+fi
+

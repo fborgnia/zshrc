@@ -1,0 +1,20 @@
+host_color=green
+# give me colors
+autoload -U colors
+colors
+
+if [[ $host_color == "" ]]; then
+  host_colors=(black green blue cyan red yellow magenta white)
+  host_color=$host_colors[$[${RANDOM}%7 +1 ]]
+  echo host_color=$host_color | cat - ~/.zsh/rc/prompt.rc > /tmp/prompt.rc && mv /tmp/prompt.rc ~/.zsh/rc/prompt.rc
+fi
+
+user_color="green" 
+path_color="black"
+date_color="white"
+user="%{$fg[$user_color]%}%n" 
+host="%B%{$fg[$host_color]%}%m"
+cpath="%B%{$fg[$path_color]%}%~%b"
+end="%{$reset_color%}%% "
+
+PS1="$host $cpath $end"
