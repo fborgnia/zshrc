@@ -1,0 +1,4 @@
+HISTFILE=~/.histfile
+SAVEHIST=500000
+setopt appendhistory
+setopt share_history
