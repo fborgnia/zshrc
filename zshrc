@@ -22,7 +22,7 @@ bindkey "5C" forward-word
 compinit
 
 # Config file
-source config.rc
+source $HOME/.zsh/config.rc
 
 # Resource files
 for file in $HOME/.zsh/rc/*.rc; do
